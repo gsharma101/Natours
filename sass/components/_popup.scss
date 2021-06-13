@@ -27,6 +27,9 @@
   &__left {
     width: 33.33333333%;
     display: table-cell;
+    @include respond(tab-land) {
+      display: table-row;
+    }
   }
 
   &__right {
@@ -34,11 +37,24 @@
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem;
+    @include respond(tab-land) {
+      display: table-row;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
   }
 
   &__img {
     display: block;
     width: 100%;
+    @include respond(tab-land) {
+      width: 50%;
+      height: auto;
+      display: inline-block;
+      &_1 {
+        transform: scale(1.5, 1.5);
+      }
+    }
   }
 
   &__text {
@@ -79,6 +95,10 @@
       display: inline-block;
       transition: all 0.2s;
       line-height: 1;
+      @include respond(tab-land) {
+        font-size: 4rem;
+        color: $color-white;
+      }
     }
     &:hover {
       color: $color-primary;

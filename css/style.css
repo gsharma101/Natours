@@ -610,14 +610,29 @@ body {
   .popup__left {
     width: 33.33333333%;
     display: table-cell; }
+    @media (max-width: 75em) {
+      .popup__left {
+        display: table-row; } }
   .popup__right {
     width: 66.666666667%;
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem; }
+    @media (max-width: 75em) {
+      .popup__right {
+        display: table-row;
+        padding: 1rem 2rem;
+        text-align: center; } }
   .popup__img {
     display: block;
     width: 100%; }
+    @media (max-width: 75em) {
+      .popup__img {
+        width: 50%;
+        height: auto;
+        display: inline-block; }
+        .popup__img_1 {
+          transform: scale(1.5, 1.5); } }
   .popup__text {
     font-size: 1.4rem;
     margin-bottom: 4rem;
@@ -647,6 +662,10 @@ body {
     display: inline-block;
     transition: all 0.2s;
     line-height: 1; }
+    @media (max-width: 75em) {
+      .popup__close:link, .popup__close:visited {
+        font-size: 4rem;
+        color: #fff; } }
   .popup__close:hover {
     color: #55c57a; }
 
